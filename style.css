@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+}
+
+/* Loader*/
+
+.loader{
+    background-color: #ffffff;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation-name: disappear;
+    animation-duration: 200ms;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    transform-origin: top;
+    display: grid;
+    place-items: center;
+}
+
+@keyframes disappear {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+.logoloader{
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid rgba(147,86,220,.9);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: infinity 2s linear infinite;
+}
+
+@keyframes infinity {
+    0% { 
+        transform: rotate(0deg);
+     }
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
+
+  
+/* Header */
+
+header{
+    padding: 16px;
+    box-shadow: 0 0 16px lightgrey;
+    position: relative;
+    z-index: auto;
+}
+
+.headerlogo{
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    margin: 0;
+}
+
+/* Location */
+
+#location{
+    display: flex;
+    justify-content: center;
+    background-color: #f3f3f3;
+    font-size: 20px;
+    padding: 26px;
+}
+
+#location input{
+    border: none;
+    background-color: transparent;
+}
+
+#location input:focus{
+    outline: none;
+}
+
+#location input::placeholder{
+    font-size: 16px;
+    color: black;
+    /*background-color: #f3f3f3;*/
+}
+
+#location i{
+    margin-right: 16px;
+    font-size: 16px;
+}
+
+/* Reservation */
+
+#reservation{
+    padding: 32px 32px 70px 32px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+#reservation .reservationtitle {
+    margin: 0;
+}
+
+#reservation .reservationbox .reservationtext{
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#reservation .reservationbox a{
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    box-shadow: 4px 8px 8px rgb(0 0 0 / 13%);
+    padding: 12px 20px;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 100px;
+    color: white;
+    transition-duration: .25s;
+}
+
+#reservation .reservationbox a:hover{
+    background-color: white;
+    box-shadow: 4px 4px 8px rgb(0 0 0 / 50%);
+}
+
+/* Fonctionnement */
+
+#fonctionmain{
+    padding: 32px 16px;
+}
+
+.fonctionnement{
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+}
+
+.fonctionnement h2{
+    margin: 0;
+}
+
+.fonctionnement ul li .number{
+    position: absolute;
+    left: -10px;
+    background-color: #9356DC;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    align-items: center;
+}
+
+.fonctionnement ul{
+    margin: 0;
+    padding: 0;
+}
+
+.fonctionnement ul li{
+    background-color: #f6f6f6;
+    padding: 25px 33px;
+    margin: 16px 0 20px 12px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgb(0 0 0 / 13%);
+    list-style: none;
+    position: relative;
+    transition: background-color 1s;
+}
+
+.fonctionnement ul li:hover{
+    background-color: rgba(107, 0, 157, 0.1);
+    cursor: pointer;
+}
+
+.fonctionnement ul li i{
+    margin-right: 16px;
+    color: #7e7e7e;
+}
+
+.fonctionnement ul li:hover i{
+    color: #9356DC;
+}
+
+/* Restaurants */
+
+#restau{
+    background-color: whitesmoke;
+    padding: 32px 16px 70px 16px;
+}
+
+.restaurants{
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+} 
+
+.restaurantsbox{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 32px;
+}
+
+.restaurantsbox article{
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 4px 4px 8px rgb(0 0 0 / 13%);
+    position: relative;
+}
+
+.restaurantsbox article:hover{
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.2);
+    transition-duration: 1s;
+}
+
+.restaurants .restaurantsbox img{
+    width: 100%;
+    height: 192px;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+    border: 0 solid transparent;
+}
+
+.restaurants .restaurantsbox article .new{
+    position: absolute;
+    right: 8px;
+    margin-top: 13px;
+    background-color: #99E2D0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: green;
+}
+
+.restaurants .restaurantsbox article .footerbox{
+    padding: 16px;
+}
+
+.restaurantsbox article .footerbox h3{
+    margin: 0 0 0 4px;
+}
+
+.restaurantsbox article .footerbox span{
+    margin: 0;
+    font-weight: 100;
+}
+
+.restaurantsbox article .footerbox .heart i{
+    font-size: 25px;
+    position: absolute;
+    right: 10px;
+    margin-top: -24px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.restaurantsbox article .footerbox .heart .fa-solid{
+    color: transparent;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+}
+
+.restaurantsbox article .footerbox .heart .fa-solid:hover{
+    opacity: 1;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Footer */
+
+#footer{
+    background-color: #353535;
+}
+
+#footer div{
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin: auto;
+}
+
+#footer div .footerlogo{
+    font-family: 'Shrikhand', cursive;
+    color: white;
+    font-size: 20px;
+    margin: 0 0 16px;
+}
+
+#footer ul{
+    padding: 0;
+    margin: 0;
+}
+
+#footer ul li{
+    margin:  8px 0;
+    list-style-type: none;
+}
+
+#footer ul li a{
+    color: white;
+}
+
+#footer ul li a i{
+    margin-right: 8px;
+    width: 20px;
+}
+
+@media  screen and (min-width: 860px) {
+    #fonctionmain ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 32px;
+    }
+
+    .restaurantsbox{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 32px;
+    }
+}

@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* Header */
+
+header{
+    padding: 16px;
+    box-shadow: 0 0 16px lightgrey;
+    position: relative;
+    z-index: auto;
+}
+
+
+header i{
+    font-size: 22px;
+    position: absolute;
+    top: 30px;
+}
+
+.headerlogo{
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    margin: 0;
+}
+
+/* Image */
+
+main img{
+    width: 100%;
+    object-fit: cover;
+    max-height: 512px;
+}
+
+/* Titre */
+
+div h1{
+    font-family: 'Shrikhand', cursive;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxarticle .fa-2x, .boxarticle #coeur{
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    top: 38px;
+    cursor: pointer;
+}
+
+.boxarticle #coeur{
+    color: transparent;
+    background-image: linear-gradient(0deg,rgba(147,86,220,0.9),rgba(255,121,218,1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+}
+
+.boxarticle #coeur:hover{
+    opacity: 1;
+}
+
+/* ENTRER PLATS DESSERTS */ 
+
+.entree, .plats, .desserts{
+    overflow: hidden;
+    padding: 0 16px;
+}
+
+.boxarticle{
+    padding: 16px;
+    background-color: whitesmoke;
+    border-radius: 32px 32px 0 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: auto;
+    margin-top: -60px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article h2{
+    border-bottom: 3px solid #99E2D0;
+    font-weight: 400;
+    width: 36px;
+    font-size: 18px;
+    padding-bottom: 6px;
+    margin-top: 25px;
+}
+
+article h3{
+    margin: 0;
+    font-size: 17px;
+}
+
+article .boxmenu{
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgb(0 0 0 / 13%);
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+article .boxmenu .prix{
+    margin-left: auto;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+article .boxmenu .main{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+article .main h3, article .main p{
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+article .main p{
+    font-weight: 200;
+}
+
+article .boxmenu .checkbox{
+    background-color: #99E2D0;
+    width: 64px;
+    margin: -16px -80px -16px 16px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: margin-right 0.5s;
+    flex-shrink: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+article .boxmenu .checkbox .check{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #99E2D0;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+}
+
+article .boxmenu:hover .checkbox{
+    margin-right: -16px;
+    cursor: pointer;
+}
+
+article .boxmenu{
+    overflow: hidden;
+}
+
+.gridbox .entree .boxmenu{
+    animation-name: boxmenu;
+    animation-duration: 2s;
+}
+
+@keyframes boxmenu {
+    0%{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+.gridbox .plats .boxmenu{
+    animation-name: boxmenu;
+    animation-duration: 3s;
+}
+
+@keyframes boxmenu {
+    0%{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+.gridbox .desserts .boxmenu{
+    animation-name: boxmenu;
+    animation-duration: 3s;
+}
+
+@keyframes boxmenu {
+    0%{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+.gridbox .boxmenu:hover i{
+    animation-name: turncheck;
+    animation-duration: 1s;
+}
+
+@keyframes turncheck {
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    
+}
+
+/* Commander */
+
+.boxarticle .commander{
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    box-shadow: 4px 8px 8px rgb(0 0 0 / 13%);
+    padding: 15px 20px;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 100px;
+    color: white;
+    width: 160px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.boxarticle .commander:hover{
+    background-color: white;
+    box-shadow: 4px 4px 8px rgb(0 0 0 / 50%);
+}
+
+/* Footer */
+
+#footer{
+    background-color: #353535;
+}
+
+#footer div{
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin: auto;
+}
+
+#footer div .footerlogo{
+    font-family: 'Shrikhand', cursive;
+    color: white;
+    font-size: 20px;
+    margin: 0 0 16px;
+}
+
+#footer ul{
+    padding: 0;
+    margin: 0;
+}
+
+#footer ul li{
+    margin:  8px 0;
+    list-style-type: none;
+}
+
+#footer ul li a{
+    color: white;
+}
+
+#footer ul li a i{
+    margin-right: 8px;
+    width: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+    .gridbox{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5px;
+    }
+
+    .boxarticle .fa-2x, .boxarticle #coeur{
+        font-size: 35px;
+    }
+
+    div h1{
+        font-size: 28px;
+    }
+}
