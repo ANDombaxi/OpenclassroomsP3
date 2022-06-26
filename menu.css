@@ -71,6 +71,7 @@ div h1{
     -webkit-background-clip: text;
     opacity: 0;
     transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
 }
 
 .boxarticle #coeur:hover{
@@ -154,6 +155,7 @@ article .boxmenu .checkbox{
     justify-content: center;
     align-items: center;
     transition: margin-right 0.5s;
+    -webkit-transition: margin-right 0.5s;
     flex-shrink: 0;
     border-radius: 0 20px 20px 0;
 }
@@ -168,6 +170,7 @@ article .boxmenu .checkbox .check{
     color: #99E2D0;
     border-radius: 50%;
     transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
 }
 
 article .boxmenu:hover .checkbox{
@@ -182,6 +185,8 @@ article .boxmenu{
 .gridbox .entree .boxmenu{
     animation-name: boxmenu;
     animation-duration: 2s;
+    -webkit-animation-name: boxmenu;
+    -webkit-animation-duration: 2s;
 }
 
 @keyframes boxmenu {
@@ -198,6 +203,8 @@ article .boxmenu{
 .gridbox .plats .boxmenu{
     animation-name: boxmenu;
     animation-duration: 3s;
+    -webkit-animation-name: boxmenu;
+    -webkit-animation-duration: 3s;
 }
 
 @keyframes boxmenu {
@@ -214,6 +221,8 @@ article .boxmenu{
 .gridbox .desserts .boxmenu{
     animation-name: boxmenu;
     animation-duration: 3s;
+    -webkit-animation-name: boxmenu;
+    -webkit-animation-duration: 3s;
 }
 
 @keyframes boxmenu {
@@ -230,6 +239,8 @@ article .boxmenu{
 .gridbox .boxmenu:hover i{
     animation-name: turncheck;
     animation-duration: 1s;
+    -webkit-animation-name: turncheck;
+    -webkit-animation-duration: 1s;
 }
 
 @keyframes turncheck {
